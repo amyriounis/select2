@@ -54,15 +54,15 @@ Select2 internally uses AMD and the r.js build tool to build the files located i
 If you are using Select2 in a build environment where preexisting module names are changed during a build step, Select2 may not be able to find optional dependencies or language files. You can manually set the prefixes to use for these files using the `amdBase` and `amdLanguageBase` options.
 
 ```
-$.fn.select2.defaults.set('amdBase', 'select2/');
-$.fn.select2.defaults.set('amdLanguageBase', 'select2/i18n/');
+$.fn.vamtamSelect2.defaults.set('amdBase', 'select2/');
+$.fn.vamtamSelect2.defaults.set('amdLanguageBase', 'select2/i18n/');
 ```
 
 #### `amdBase`
 
 Specifies the base AMD loader path to be used for select2 dependency resolution. This option typically doesn't need to be changed, but is available for situations where module names may change as a result of certain build environments.
 
-#### `amdLanguageBase` 
+#### `amdLanguageBase`
 
 Specifies the base AMD loader language path to be used for select2 language file resolution. This option typically doesn't need to be changed, but is available for situations where module names may change as a result of certain build environments.
 

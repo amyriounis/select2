@@ -6687,11 +6687,11 @@ S2.define('jquery.select2',[
   './select2/defaults',
   './select2/utils'
 ], function ($, _, Select2, Defaults, Utils) {
-  if ($.fn.select2 == null) {
+  if ($.fn.vamtamSelect2 == null) {
     // All methods that should return the element
     var thisMethods = ['open', 'close', 'destroy'];
 
-    $.fn.select2 = function (options) {
+    $.fn.vamtamSelect2 = function (options) {
       options = options || {};
 
       if (typeof options === 'object') {
@@ -6731,8 +6731,8 @@ S2.define('jquery.select2',[
     };
   }
 
-  if ($.fn.select2.defaults == null) {
-    $.fn.select2.defaults = Defaults;
+  if ($.fn.vamtamSelect2.defaults == null) {
+    $.fn.vamtamSelect2.defaults = Defaults;
   }
 
   return Select2;

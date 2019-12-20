@@ -116,7 +116,7 @@ Select2 uses [decorators](https://en.wikipedia.org/wiki/Decorator_pattern) to ex
 You can apply a decorator to an adapter using the `Utils.Decorate` method provided with Select2:
 
 ```
-$.fn.select2.amd.require(
+$.fn.vamtamSelect2.amd.require(
     ["select2/utils", "select2/selection/single", "select2/selection/placeholder"],
     function (Utils, SingleSelection, Placeholder) {
   var CustomSelectionAdapter = Utils.Decorate(SingleSelection, Placeholder);

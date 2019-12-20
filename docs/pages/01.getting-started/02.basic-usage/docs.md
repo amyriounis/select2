@@ -75,14 +75,14 @@ $(document).ready(function() {
 ```
 
 <script type="text/javascript">
-  $.fn.select2.amd.require([
+  $.fn.vamtamSelect2.amd.require([
     "select2/core",
     "select2/utils"
   ], function (Select2, Utils, oldMatcher) {
     var $basicSingle = $(".js-example-basic-single");
     var $basicMultiple = $(".js-example-basic-multiple");
 
-    $.fn.select2.defaults.set("width", "100%");
+    $.fn.vamtamSelect2.defaults.set("width", "100%");
 
     $basicSingle.select2();
     $basicMultiple.select2();

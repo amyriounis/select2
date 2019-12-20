@@ -37,7 +37,7 @@ Select2 will respond to the <code>disabled</code> attribute on `<select>` elemen
 
 $(".js-example-disabled").select2();
 $(".js-example-disabled-multi").select2();
-  
+
 $(".js-programmatic-enable").on("click", function () {
   $(".js-example-disabled").prop("disabled", false);
   $(".js-example-disabled-multi").prop("disabled", false);
@@ -84,14 +84,14 @@ You can, and should, use a `<label>` with Select2, just like any other `<select>
 ```
 
 <script type="text/javascript">
-  $.fn.select2.amd.require([
+  $.fn.vamtamSelect2.amd.require([
     "select2/core",
     "select2/utils"
   ], function (Select2, Utils, oldMatcher) {
     var $basicSingle = $(".js-example-basic-single");
     var $basicMultiple = $(".js-example-basic-multiple");
 
-    $.fn.select2.defaults.set("width", "100%");
+    $.fn.vamtamSelect2.defaults.set("width", "100%");
 
     $basicSingle.select2();
     $basicMultiple.select2();

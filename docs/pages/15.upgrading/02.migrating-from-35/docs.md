@@ -38,10 +38,10 @@ The options that you create should have `selected="selected"` set so Select2 and
 In past versions of Select2 the `matcher` callback processed options at every level, which limited the control that you had when displaying results, especially in cases where there was nested data. The `matcher` function was only given the individual option, even if it was a nested options, without any context.
 
 With the new [matcher function](/searching), only the root-level options are matched and matchers are expected to limit the results of any children options that they contain. This allows developers to customize how options within groups can be displayed, and modify how the results are returned.
- 
+
 ### Wrapper for old-style `matcher` callbacks
 
-For backwards compatibility, a wrapper function has been created that allows old-style matcher functions to be converted to the new style. 
+For backwards compatibility, a wrapper function has been created that allows old-style matcher functions to be converted to the new style.
 
 This wrapper function is only bundled in the [full version of Select2](/getting-started/builds-and-modules).  You can retrieve the function from the `select2/compat/matcher` module, which should just wrap the old matcher function.
 
@@ -61,7 +61,7 @@ function matchStart (term, text) {
   return false;
 }
 
-$.fn.select2.amd.require(['select2/compat/matcher'], function (oldMatcher) {
+$.fn.vamtamSelect2.amd.require(['select2/compat/matcher'], function (oldMatcher) {
   $(".js-example-matcher-compat").select2({
     matcher: oldMatcher(matchStart)
   })
@@ -134,7 +134,7 @@ selected values into data objects that can be displayed. The default implementat
 When using the new `current` method of the custom data adapter, **this method is called any time Select2 needs a list** of the currently selected options. This is different from the old `initSelection` in that it was only called once, so it could suffer from being relatively slow to process the data (such as from a remote data source).
 
 ```
-$.fn.select2.amd.require([
+$.fn.vamtamSelect2.amd.require([
     'select2/data/array',
     'select2/utils'
 ], function (ArrayData, Utils) {
@@ -230,7 +230,7 @@ The custom `query` and `initSelection` methods have been replaced by [custom dat
 This has been replaced by custom data adapters which define a similarly named `query` method. The comparable data adapter is provided below as an example.
 
 ```
-$.fn.select2.amd.require([
+$.fn.vamtamSelect2.amd.require([
 'select2/data/array',
 'select2/utils'
 ], function (ArrayData, Utils) {
